@@ -2,7 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import Customers from './components/customers/customers';
 
-//feafwef
+
 function App() {
   return (
     <div className="App">
