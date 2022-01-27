@@ -1,0 +1,1 @@
+This is a web scraper app designed to grab information from preset websites, store them in a backend database, and display them in front React
