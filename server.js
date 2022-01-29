@@ -7,7 +7,7 @@ const app = express();
 app.get('/api/test', (req, res) => {
   function scrapingRequest() {
     return new Promise(resolve => {
-        request('https://www.marketwatch.com/investing/stock/gme?mod=quote_search', (error, response, html) => {
+        request('https://www.marketwatch.com/investing/stock/gme', (error, response, html) => {
           if (!error && response.statusCode == 200) {} {
             const $ = cheerio.load(response.body);
             let data = $('h2 bg-quote').text();
