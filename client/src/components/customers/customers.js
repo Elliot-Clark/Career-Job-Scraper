@@ -14,7 +14,14 @@ class Customers extends Component {
     componentDidMount() {
         fetch('/api/test')
         .then(res => res.json())
-        .then(crawlerData => this.setState({crawlerData}, () => console.log('Crawler Data fetched...')));
+        .then(crawlerData => this.setState({crawlerData}, () => console.log('Crawler Data fetched...')))
+        .then(setInterval(this.loop, 5000));
+    }
+
+    loop() {
+        fetch('/api/test')
+        .then(res => res.json())
+        .then(crawlerData => console.log(crawlerData));
     }
 
     render() {

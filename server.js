@@ -18,6 +18,7 @@ app.get('/api/test', (req, res) => {
   }
   async function asyncCall() {
     const result = await scrapingRequest();
+    console.log("Running");
     res.json(result);
   }
   asyncCall();
