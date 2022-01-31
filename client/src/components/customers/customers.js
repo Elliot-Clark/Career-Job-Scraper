@@ -7,7 +7,8 @@ class Customers extends Component {
     constructor() {
         super()
         this.state = {
-            crawlerData: ""
+            crawlerData: "",
+            test: ''
         }
     }
 
@@ -15,13 +16,14 @@ class Customers extends Component {
         fetch('/api/test')
         .then(res => res.json())
         .then(crawlerData => this.setState({crawlerData}, () => console.log('Crawler Data fetched...')))
-        .then(setInterval(this.loop, 5000));
+        setInterval(this.updateLoop, 1000);
+
     }
 
-    loop() {
+    updateLoop = () => {
         fetch('/api/test')
         .then(res => res.json())
-        .then(crawlerData => console.log(crawlerData));
+        .then(crawlerData => this.setState({crawlerData}, () => console.log('Crawler Data fetched again........')))
     }
 
     render() {
