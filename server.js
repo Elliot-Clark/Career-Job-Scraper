@@ -10,8 +10,7 @@ app.get('/api/test', (req, res) => {
         request('https://www.marketwatch.com/investing/stock/gme', (error, response, html) => {
           if (!error && response.statusCode == 200) {} {
             const $ = cheerio.load(response.body);
-            //let data = $('h2 bg-quote').text();
-            let data = Math.floor(Math.random() * 10);
+            let data = $('h2 bg-quote').text();
             resolve(data);
           }
         });

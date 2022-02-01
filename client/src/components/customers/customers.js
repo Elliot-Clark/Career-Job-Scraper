@@ -16,7 +16,7 @@ class Customers extends Component {
         fetch('/api/test')
         .then(res => res.json())
         .then(crawlerData => this.setState({crawlerData}, () => console.log('Crawler Data fetched...')))
-        setInterval(this.updateLoop, 1000);
+        //setInterval(this.updateLoop, 10000);
 
     }
 
@@ -30,7 +30,7 @@ class Customers extends Component {
         return (
             <div>
                 <h2>Data</h2>
-                {this.state.crawlerData}
+                {"GME Price: " + this.state.crawlerData}
             </div>
         );
     }
