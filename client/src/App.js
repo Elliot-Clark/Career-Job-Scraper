@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import Customers from './components/customers/customers';
+import ClientInput from './components/clientInput/clientInput';
 
 
 function App() {
@@ -9,8 +9,7 @@ function App() {
       <header className="App-header">
 
         <img src={logo} className="App-logo" alt="logo" />
-        
-        <Customers />
+        <ClientInput />
       </header>
     </div>
   );
