@@ -15,15 +15,7 @@ class Customers extends Component {
         fetch('/api/test')
         .then(res => res.json())
         .then(crawlerData => this.setState({crawlerData}, () => console.log('Crawler Data fetched...')))
-        //setInterval(this.updateLoop, 10000);
-
     }
-
-    // updateLoop = () => {
-    //     fetch('/api/test')
-    //     .then(res => res.json())
-    //     .then(crawlerData => this.setState({crawlerData}, () => console.log('Crawler Data fetched again........')))
-    // }
 
     render() {
         return (
