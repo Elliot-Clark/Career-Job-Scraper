@@ -1,3 +1,3 @@
-# Scraper
+# Job Scraper
 
-Grabs data from preset websites, stores them in backend database, and display results in frontend React.
+Currently a WIP project with the end goal of scraping relevant job listings from various company company websites and display results in frontend React.
