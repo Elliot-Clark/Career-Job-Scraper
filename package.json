@@ -12,8 +12,11 @@
   "author": "Elliot Clark",
   "license": "MIT",
   "dependencies": {
+    "axios": "^0.25.0",
+    "body-parser": "^1.19.1",
     "cheerio": "^1.0.0-rc.10",
     "concurrently": "^7.0.0",
+    "cors": "^2.8.5",
     "express": "^4.17.2",
     "pretty": "^2.0.0",
     "puppeteer": "^13.1.3"
