@@ -10,8 +10,8 @@ class App extends Component {
     super()
     this.state = {
       replaceJobs: false,
-      companies: '',
-      searchlURLs: '',
+      companies: [],
+      searchlURLs: [],
       jobs: []
     }
   }
