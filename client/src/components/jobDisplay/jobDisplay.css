@@ -1,9 +1,48 @@
-a {
-    text-decoration: none;
-    color: white;
+.groupedJobList {
+  border: 2px solid gray;
+  border-radius: 5px;
+  padding: 2%;
+  background-color: #ccc;
+  letter-spacing: -1px;
 }
 
-.groupedJobList {
-    border: 2px solid green;
-    padding: 5%;
+.groupedJobList a {
+  text-decoration: none;
+  color: black;
+  background-color: darkgrey;
+  border-radius: 10px;
 }
+
+.groupedJobList .companyTitle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.groupedJobList .companyTitle span {
+  text-align: left;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 5%;
+}
+
+.groupedJobList ul {
+  background-color: grey;
+}
+
+.groupedJobList ul li {
+  background-color: white;
+  border: 1px solid grey;
+  text-align: left;
+  margin: 1%;
+}
+/*# sourceMappingURL=jobDisplay.css.map */
