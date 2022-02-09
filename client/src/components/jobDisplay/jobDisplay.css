@@ -1,9 +1,11 @@
 .groupedJobList {
+  width: 80vw;
   border: 2px solid gray;
   border-radius: 5px;
   padding: 2%;
   background-color: #ccc;
   letter-spacing: -1px;
+  margin: 5%;
 }
 
 .groupedJobList a {
@@ -11,6 +13,13 @@
   color: black;
   background-color: darkgrey;
   border-radius: 10px;
+}
+
+.groupedJobList a img {
+  background-color: green;
+  height: 100px;
+  width: 100px;
+  padding: 1rem;
 }
 
 .groupedJobList .companyTitle {
@@ -44,5 +53,19 @@
   border: 1px solid grey;
   text-align: left;
   margin: 1%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.groupedJobList ul li div {
+  width: auto;
+  padding: .3em;
+  font-size: 22px;
+  line-height: 1.7;
+  font-family: "SF Pro Text","SF Pro Icons","Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 /*# sourceMappingURL=jobDisplay.css.map */
