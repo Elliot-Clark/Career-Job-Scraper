@@ -3,7 +3,7 @@ const puppeteer = require('puppeteer');
 
 const router = express.Router();
 
-router.post('/jobSearchs', function(req, res) {
+router.post('/paypal', function(req, res) {
 	let jobSearchInput = req.query;
 		(async () => {
 			const browser = await puppeteer.launch();
@@ -27,9 +27,6 @@ router.post('/jobSearchs', function(req, res) {
 				waitUntil: "networkidle2",
 			});
 
-			
-
-
             let jobTitles = await page.$$eval('td > a, .job-result-title', links => {
 				links = links.map(element => element.textContent)
 				let arr = []
@@ -39,6 +36,13 @@ router.post('/jobSearchs', function(req, res) {
 				return arr
 			});
 			console.log(jobTitles);
+
+			if(!jobTitles[0]) {
+				console.log("Quitting");
+				let results = ["Paypal", URL]
+				res.json(results)
+				return
+			}
 
 			let jobLinks = await page.$$eval('td > a, .job-result-title', links => {
 				links = links.map(element => element.href)
@@ -75,6 +79,7 @@ router.post('/jobSearchs', function(req, res) {
 			for (i = 0; i <jobTitles.length; i++) {
 				results.push([jobTitles[i], jobLinks[i], jobLocations[i], jobPostDate[i]])
 			}
+
 			res.json(results);
 		})();
 	});
