@@ -19,13 +19,12 @@ class App extends Component {
   toggleReplaceJobs = () => {
       this.setState({ replaceJobs: true});
   }
-
   handleCallBack = (fetchedJobResults) => {
     if (!this.state.replaceJobs) {
       this.setState({ 
-        companies: [this.state.companies, fetchedJobResults[0]],
-        searchlURLs: [this.state.searchlURLs, fetchedJobResults[1]],
-        jobs: [this.state.jobs, fetchedJobResults.slice(2)]
+        companies: this.state.companies.concat([fetchedJobResults[0]]),
+        searchlURLs: this.state.searchlURLs.concat([fetchedJobResults[1]]),
+        jobs: this.state.jobs.concat([fetchedJobResults.slice(2)])
       }, () => {
       });
     }
@@ -34,7 +33,7 @@ class App extends Component {
         replaceJobs: false,
         companies: [fetchedJobResults[0]],
         searchlURLs: [fetchedJobResults[1]],
-        jobs: fetchedJobResults.slice(2)
+        jobs: [fetchedJobResults.slice(2)]
       }, () => {
       });
     }
@@ -46,7 +45,10 @@ class App extends Component {
         <header className="App-header">
   
           <img src={logo} className="App-logo" alt="logo" />
-          <ClientInput handleCallBack = {this.handleCallBack} toggleReplaceJobs = {this.toggleReplaceJobs}/>
+          <ClientInput 
+            handleCallBack = {this.handleCallBack} 
+            toggleReplaceJobs = {this.toggleReplaceJobs}
+          />
           <JobDisplay 
             companies = {this.state.companies}
             searchlURLs = {this.state.searchlURLs}
