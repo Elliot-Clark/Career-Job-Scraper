@@ -1,11 +1,11 @@
 const express = require('express');
 const app = express();
 
+const routers = require('./routes/amazon.js');
+app.use(routers);
 
-const router = require('./routes/amazon.js')
-
-
-app.use(router);
+const router = require('./routes/paypal.js');
+app.use(router)
 
 
 
