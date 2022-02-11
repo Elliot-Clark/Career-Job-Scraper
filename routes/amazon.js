@@ -3,7 +3,7 @@ const puppeteer = require('puppeteer');
 
 const router = express.Router();
 
-router.post('/jobSearch', function(req, res) {
+router.post('/amazon', function(req, res) {
 	let jobSearchInput = req.query;
 		(async () => {
 			const browser = await puppeteer.launch();
