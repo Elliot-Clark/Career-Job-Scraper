@@ -11,12 +11,9 @@ const JobDisplay = (props) =>  {
                     <span>{item}</span>
                     <img src={require(`./logos/${item}.png`)} alt={item + " Logo"} ></img>
                 </a>
-                
+                {props.jobs[index].length ? '' : <div className="NoResults">Nothing</div>}
                 {   
                     props.jobs[index].map((item, index) => {
-                        // if (!props.jobs[index]) {
-                        //     return ''
-                        // }
                         return (
                             <ul key={index}>
                                 <a target="_blank" rel="noreferrer" href={item[1]} >
