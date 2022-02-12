@@ -3,10 +3,10 @@ const puppeteer = require('puppeteer');
 
 const router = express.Router();
 
-router.post('/paypal', function(req, res) {
+router.post('/crateandbarrel', function(req, res) {
 	let jobSearchInput = req.query;
 		(async () => {
-			const companyName = "Paypal"
+			const companyName = "Crate and Barrel"
 			const browser = await puppeteer.launch();
 			const page = await browser.newPage(); 
 			await page.setRequestInterception(true);
@@ -17,18 +17,24 @@ router.post('/paypal', function(req, res) {
 				req.continue();
 				}
 			});
-
-
-			const URL = "https://jobsearch.paypal-corp.com/en-US/search?keywords="
-			+ jobSearchInput.jobTitleSearch.split(' ').join("%20")
-			+ "&location="
-			+ jobSearchInput.city
-			+ "&facetcountry=us"
+			
+			
+			//Each URL has to be customized to fit each individual website
+			const URL = "https://jobs.crateandbarrel.com/search-jobs/"
+            + jobSearchInput.jobTitleSearch 
+            + "/"
+            + (jobSearchInput.city ? 
+                jobSearchInput.city.split(' ').join("%20")
+                + "%2C%20AZ/351/1/4/6252001-5551752-5303754-5308655/33x44838/-112x07404/50/2"
+                :
+                "/351/1?fl=6252001,6251999"
+              )
 			await page.goto(URL, {
 				waitUntil: "networkidle2",
 			});
 
-            let jobTitles = await page.$$eval('td > a, .job-result-title', links => {
+
+			let jobTitles = await page.$$eval('li > a > h3', links => {
 				links = links.map(element => element.textContent)
 				let arr = []
 				for (let i = 0; i < 5; i++) {
@@ -37,13 +43,14 @@ router.post('/paypal', function(req, res) {
 				return arr
 			});
 
+			//Escape function if the scraped results return nothing from targeted site
 			if(!jobTitles[0]) {
-				let results = [companyName, URL]
+				let results = [companyName, URL, ["No Results"]]
 				res.json(results)
 				return
 			}
 
-			let jobLinks = await page.$$eval('td > a, .job-result-title', links => {
+			let jobLinks = await page.$$eval('li > a', links => {
 				links = links.map(element => element.href)
 				let arr = []
 				for (let i = 0; i < 5; i++) {
@@ -52,7 +59,7 @@ router.post('/paypal', function(req, res) {
 				return arr
 			});
 
-			let jobLocations = await page.$$eval('.job-location-line', links => {
+			let jobLocations = await page.$$eval('.job-location', links => {
 				links = links.map(element => element.textContent)
 				let arr = []
 				for (let i = 0; i < 5; i++) {
@@ -61,12 +68,12 @@ router.post('/paypal', function(req, res) {
 				return arr
 			});
 
-
-			let jobPostDate = await page.$$eval('.job-result-date-posted-cell', links => {
+			let jobPostDate = await page.$$eval('.job-date-posted', links => {
 				links = links.map(element => element.textContent)
+				console.log(links);
 				let arr = []
 				for (let i = 0; i < 5; i++) {
-					arr.push(links[i].replace(/(\s\s\s*)/g, ''));
+					arr.push(links[i]);
 				}
 				return arr
 			});
@@ -81,3 +88,5 @@ router.post('/paypal', function(req, res) {
 	});
 
 module.exports = router
+
+
