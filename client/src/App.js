@@ -12,6 +12,7 @@ class App extends Component {
       replaceJobs: false,
       companies: [],
       searchlURLs: [],
+      notes: [],
       jobs: []
     }
   }
@@ -24,7 +25,8 @@ class App extends Component {
       this.setState({ 
         companies: this.state.companies.concat([fetchedJobResults[0]]),
         searchlURLs: this.state.searchlURLs.concat([fetchedJobResults[1]]),
-        jobs: this.state.jobs.concat([fetchedJobResults.slice(2)])
+        notes: this.state.notes.concat([fetchedJobResults[2]]),
+        jobs: this.state.jobs.concat([fetchedJobResults.slice(3)])
       }, () => {
       });
     }
@@ -33,7 +35,8 @@ class App extends Component {
         replaceJobs: false,
         companies: [fetchedJobResults[0]],
         searchlURLs: [fetchedJobResults[1]],
-        jobs: [fetchedJobResults.slice(2)]
+        notes: [fetchedJobResults[2]],
+        jobs: [fetchedJobResults.slice(3)]
       }, () => {
       });
     }
@@ -53,6 +56,7 @@ class App extends Component {
             companies = {this.state.companies}
             searchlURLs = {this.state.searchlURLs}
             jobs = {this.state.jobs}
+            notes = {this.state.notes}
           />
         </header>
       </div>
