@@ -18,26 +18,105 @@ class ClientInput extends Component {
         this.props.toggleReplaceJobs();
 
         let jobSearchInput = document.getElementById("jobSearchInput").value
-        let city = document.getElementById("cityInput").value
-        let zipCode = document.getElementById("zipCodeInput").value
         let country = document.getElementById("countryInput").value
         let USstate = document.getElementById("stateInput").value
+        let city = document.getElementById("cityInput").value
 
-        if (document.getElementById("Amazon").checked) {
+        if (document.getElementById("adobe").checked) {
+            axios.post('/adobe', {}, {
+                params: { jobTitleSearch: jobSearchInput, city: city, country: country, USstate: USstate,}
+            }).then(response => {
+                this.props.handleCallBack(response.data);
+            });
+        }
+
+        if (document.getElementById("amazon").checked) {
             axios.post('/amazon', {}, {
-                params: { jobTitleSearch: jobSearchInput, city: city, zipCode: zipCode, country: country, USstate: USstate,}
+                params: { jobTitleSearch: jobSearchInput, city: city, country: country, USstate: USstate,}
             }).then(response => {
                 this.props.handleCallBack(response.data);
             });
         }
         
-        if (document.getElementById("Paypal").checked) {
+        if (document.getElementById("paypal").checked) {
             axios.post('/paypal', {}, {
-                params: { jobTitleSearch: jobSearchInput, city: city, zipCode: zipCode, country: country, USstate: USstate,}
+                params: { jobTitleSearch: jobSearchInput, city: city, country: country, USstate: USstate,}
             }).then(response => {
                 this.props.handleCallBack(response.data);
             });
         }  
+
+        if (document.getElementById("apple").checked) {
+            axios.post('/apple', {}, {
+                params: { jobTitleSearch: jobSearchInput, city: city, country: country, USstate: USstate,}
+            }).then(response => {
+                this.props.handleCallBack(response.data);
+            });
+        } 
+
+        if (document.getElementById("uber").checked) {
+            axios.post('/uber', {}, {
+                params: { jobTitleSearch: jobSearchInput, city: city, country: country, USstate: USstate,}
+            }).then(response => {
+                this.props.handleCallBack(response.data);
+            });
+        } 
+
+        if (document.getElementById("crateandbarrel").checked) {
+            axios.post('/crateandbarrel', {}, {
+                params: { jobTitleSearch: jobSearchInput, city: city, country: country, USstate: USstate,}
+            }).then(response => {
+                this.props.handleCallBack(response.data);
+            });
+        }
+        
+        if (document.getElementById("ebay").checked) {
+            axios.post('/ebay', {}, {
+                params: { jobTitleSearch: jobSearchInput, city: city, country: country, USstate: USstate,}
+            }).then(response => {
+                this.props.handleCallBack(response.data);
+            });
+        } 
+
+        if (document.getElementById("microsoft").checked) {
+            axios.post('/microsoft', {}, {
+                params: { jobTitleSearch: jobSearchInput, city: city, country: country, USstate: USstate,}
+            }).then(response => {
+                this.props.handleCallBack(response.data);
+            });
+        } 
+
+        if (document.getElementById("facebook").checked) {
+            axios.post('/facebook', {}, {
+                params: { jobTitleSearch: jobSearchInput, city: city, country: country, USstate: USstate,}
+            }).then(response => {
+                this.props.handleCallBack(response.data);
+            });
+        } 
+
+        if (document.getElementById("sap").checked) {
+            axios.post('/sap', {}, {
+                params: { jobTitleSearch: jobSearchInput, city: city, country: country, USstate: USstate,}
+            }).then(response => {
+                this.props.handleCallBack(response.data);
+            });
+        } 
+        
+        if (document.getElementById("intuit").checked) {
+            axios.post('/intuit', {}, {
+                params: { jobTitleSearch: jobSearchInput, city: city, country: country, USstate: USstate,}
+            }).then(response => {
+                this.props.handleCallBack(response.data);
+            });
+        } 
+
+        if (document.getElementById("shopify").checked) {
+            axios.post('/shopify', {}, {
+                params: { jobTitleSearch: jobSearchInput, city: city, country: country, USstate: USstate,}
+            }).then(response => {
+                this.props.handleCallBack(response.data);
+            });
+        } 
     }
 
     render() {
@@ -45,19 +124,13 @@ class ClientInput extends Component {
             <div id="inputArea">
                 <h2>Careers Job Search:</h2>
                 <div>
-                    <input type="text" id="jobSearchInput" name="jobSearchInput" placeholder='Enter Job Here' defaultValue={"Janitor"}></input>
-                    <input type="text" id="cityInput" name="cityInput" placeholder='City'></input>
-                    <input type="number" id="zipCodeInput" name="zipCodeInput" placeholder="Zip Code" defaultValue={85262}></input>
+                    <input type="text" id="jobSearchInput" name="jobSearchInput" placeholder='Enter Job Here' defaultValue={"Front End"}></input>
+
                     <input type="text" id="countryInput" name="countryInput" placeholder='Country'></input>
                     <input type="text" id="stateInput" name="stateInput" placeholder='State' defaultValue={"Arizona"}></input>
-                    <Checkbox 
-                        handleCallBack = {this.props.handleCallBack}
-                        jobTitleSearch = {this.state.jobTitleSearch}
-                        city = {this.state.city}
-                        zipCode = {this.state.zipCode}
-                        country = {this.state.country}
-                        USstate = {this.state.USstate}
-                    />
+                    <input type="text" id="cityInput" name="cityInput" placeholder='City' defaultValue={'Phoenix'}></input>
+              
+                    < Checkbox />
                     <input type="button" value="Submit" onClick={this.initSearch}></input>
                 </div> 
             </div>
