@@ -1,11 +1,8 @@
-ul {
-    list-style: none;
-    padding: 0;
-    margin: auto;
+input {
+  margin: 2%;
 }
 
-li {
-    font-size: 1.3rem;
-    line-height: 2rem;
-    border-bottom: 1px dotted #777;
+#submit {
+  font-size: 2rem;
 }
+/*# sourceMappingURL=clientInput.css.map */
