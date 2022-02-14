@@ -131,7 +131,7 @@ class ClientInput extends Component {
                     <input type="text" id="cityInput" name="cityInput" placeholder='City' defaultValue={'Phoenix'}></input>
               
                     < Checkbox />
-                    <input type="button" value="Submit" onClick={this.initSearch}></input>
+                    <input type="button" id="submit" value="Submit" onClick={this.initSearch}></input>
                 </div> 
             </div>
         );
