@@ -1,8 +1,10 @@
-input {
-  margin: 2%;
+#inputArea {
+  border: 1px solid orange;
+  width: 70%;
 }
 
-#submit {
-  font-size: 2rem;
+#inputArea input {
+  margin: 1%;
+  padding: 1%;
 }
 /*# sourceMappingURL=clientInput.css.map */
