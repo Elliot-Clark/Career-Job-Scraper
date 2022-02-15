@@ -7,4 +7,8 @@
   margin: 1%;
   padding: 1%;
 }
+
+#inputArea #jobSearchInput {
+  width: 30%;
+}
 /*# sourceMappingURL=clientInput.css.map */

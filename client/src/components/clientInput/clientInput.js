@@ -125,11 +125,13 @@ class ClientInput extends Component {
                 <h2>Careers Job Search:</h2>
                 <div>
                     <input type="text" id="jobSearchInput" name="jobSearchInput" placeholder='Enter Job Here' defaultValue={"Front End"}></input>
-
+                </div>
+                <div> 
                     <input type="text" id="countryInput" name="countryInput" placeholder='Country'></input>
                     <input type="text" id="stateInput" name="stateInput" placeholder='State' defaultValue={"Arizona"}></input>
                     <input type="text" id="cityInput" name="cityInput" placeholder='City' defaultValue={'Phoenix'}></input>
-              
+                </div>
+                <div>
                     < Checkbox />
                     <input type="button" id="submit" value="Submit" onClick={this.initSearch}></input>
                 </div> 
