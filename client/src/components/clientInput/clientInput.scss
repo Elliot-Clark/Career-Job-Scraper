@@ -1,13 +1,33 @@
+$font-color: #e6e6e6;
+
+
+
 #inputArea {
+    text-align: center;
     border: 1px solid orange;
     width: 70%;
-
     input {
         margin: 1%;
         padding: 1%;
     }
     
-    #jobSearchInput {
-        width: 30%;
+    #jobSearchInputContainer {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        margin: 0 auto;
+
+        label {
+            font-size: 1rem;
+            text-align: left;
+            color: $font-color;
+            padding-left: 10px;
+        }
+
+        #jobSearchInput {
+            height: 30px;
+        }
     }
 }
+    

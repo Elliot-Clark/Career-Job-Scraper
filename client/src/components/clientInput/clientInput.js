@@ -123,7 +123,8 @@ class ClientInput extends Component {
         return (
             <div id="inputArea">
                 <h2>Careers Job Search:</h2>
-                <div>
+                <div id="jobSearchInputContainer">
+                    <label htmlFor="jobSearchInput">Job Search Input (required)</label>
                     <input type="text" id="jobSearchInput" name="jobSearchInput" placeholder='Enter Job Here' defaultValue={"Front End"}></input>
                 </div>
                 <div> 

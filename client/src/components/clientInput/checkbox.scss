@@ -1,4 +1,5 @@
 #checkboxContainer {
+    text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -14,5 +15,15 @@
     #checkboxes {
         width: 100%;
         margin: 0 auto;
+        display: flex;
+        flex-wrap:wrap;
+        font-size: 1.5rem;
+        text-align: left;
+        
+        span {
+            white-space:nowrap;
+            width: 25%;
+            padding-left: 7vw;
+        }
     }
 }

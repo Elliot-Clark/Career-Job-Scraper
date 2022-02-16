@@ -1,4 +1,5 @@
 #inputArea {
+  text-align: center;
   border: 1px solid orange;
   width: 70%;
 }
@@ -8,7 +9,27 @@
   padding: 1%;
 }
 
-#inputArea #jobSearchInput {
-  width: 30%;
+#inputArea #jobSearchInputContainer {
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 50%;
+  margin: 0 auto;
+}
+
+#inputArea #jobSearchInputContainer label {
+  font-size: 1rem;
+  text-align: left;
+  color: #e6e6e6;
+  padding-left: 10px;
+}
+
+#inputArea #jobSearchInputContainer #jobSearchInput {
+  height: 30px;
 }
 /*# sourceMappingURL=clientInput.css.map */
