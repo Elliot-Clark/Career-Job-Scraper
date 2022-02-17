@@ -8,15 +8,11 @@ router.post('/adobe', function(req, res) {
 		(async () => {
 			const companyName = "Adobe"
 			
-			if (jobSearchInput.country.toLowerCase() === "united states of america" || jobSearchInput.country.toLowerCase() === 'usa' || jobSearchInput.country.toLowerCase() === "america") {
-                jobSearchInput.country = "United States"
-            }
 
 			//Each URL has to be customized to fit each individual website
 			const URL = "https://adobe.wd5.myworkdayjobs.com/external_experienced?q="
             + jobSearchInput.jobTitleSearch.split(' ').join("+")
             + "+"
-            + (jobSearchInput.country ? jobSearchInput.country + "+" : '')
             + (jobSearchInput.USstate ? jobSearchInput.USstate + "+" : '')
             + (jobSearchInput.city ? jobSearchInput.city : '')
 

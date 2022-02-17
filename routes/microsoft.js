@@ -17,15 +17,11 @@ router.post('/microsoft', function(req, res) {
 				req.continue();
 				}
 			});
-			
-			if (jobSearchInput.country.toLowerCase() === "united states of america" || jobSearchInput.country.toLowerCase() === 'usa' || jobSearchInput.country.toLowerCase() === "america") {
-                jobSearchInput.country = "United States"
-            }
 
 			//Each URL has to be customized to fit each individual website
 			const URL = "https://careers.microsoft.com/us/en/search-results?keywords="
             + jobSearchInput.jobTitleSearch.split(' ').join("%20")
-            + (jobSearchInput.country ? "%20" + jobSearchInput.country.split(' ').join("%20") : '')
+            + " United%20States"
             + (jobSearchInput.USstate ? "%20" + jobSearchInput.USstate.split(' ').join("%20") : '')
             + (jobSearchInput.city ? "%20" + jobSearchInput.city.split(' ').join("%20") : '')
 			await page.goto(URL, {
@@ -37,6 +33,9 @@ router.post('/microsoft', function(req, res) {
 				links = links.map(element => element.textContent)
 				let arr = []
 				for (let i = 0; i < 5; i++) {
+					if(!links[i]) {
+						break
+					}
 					arr.push(links[i]);
 				}
 				return arr

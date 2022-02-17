@@ -22,7 +22,6 @@ router.post('/ebay', function(req, res) {
 			//Each URL has to be customized to fit each individual website
 			const URL = "https://jobs.ebayinc.com/search-jobs?k="
             + jobSearchInput.jobTitleSearch.split(' ').join("%20")
-            + (jobSearchInput.country ? "%20" + jobSearchInput.country.split(' ').join("%20") : '')
             + (jobSearchInput.USstate ? "%20" + jobSearchInput.USstate.split(' ').join("%20") : '')
             + (jobSearchInput.city ? "%20" + jobSearchInput.city.split(' ').join("%20") : '')
 			await page.goto(URL, {
@@ -34,6 +33,9 @@ router.post('/ebay', function(req, res) {
 				links = links.map(element => element.textContent)
 				let arr = []
 				for (let i = 0; i < 5; i++) {
+					if(!links[i]) {
+						break
+					}
 					arr.push(links[i]);
 				}
 				return arr

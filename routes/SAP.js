@@ -23,7 +23,6 @@ router.post('/sap', function(req, res) {
 			const URL = "https://jobs.sap.com/search/?createNewAlert=false&q="
             + jobSearchInput.jobTitleSearch.split(' ').join("+")
             + "&optionsFacetsDD_department=&optionsFacetsDD_customfield3=&optionsFacetsDD_country=&locationsearch="
-            + (jobSearchInput.country ? jobSearchInput.country.split(' ').join("+") : '')
             + (jobSearchInput.USstate ? "+" + jobSearchInput.USstate.split(' ').join("+") : '')
             + (jobSearchInput.city ? "+" + jobSearchInput.city.split(' ').join("+") : '')
 			await page.goto(URL, {
@@ -35,6 +34,9 @@ router.post('/sap', function(req, res) {
 				links = links.map(element => element.textContent)
 				let arr = []
 				for (let i = 0; i < 5; i++) {
+					if(!links[i]) {
+						break
+					}
 					arr.push(links[i]);
 				}
 				return arr

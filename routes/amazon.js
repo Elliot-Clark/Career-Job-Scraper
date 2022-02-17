@@ -18,10 +18,9 @@ router.post('/amazon', function(req, res) {
 				}
 			});
 			
-			
 			//Each URL has to be customized to fit each individual website
 			const URL = "https://www.amazon.jobs/en/search?offset=0&result_limit=10&sort=relevant&" 
-				+ (jobSearchInput.country ? 'country%5B%5D=' + jobSearchInput.country : '')
+				+ 'country%5B%5D=' + "USA"
 				+ (jobSearchInput.USstate ? '&state%5B%5D=' + jobSearchInput.USstate.split(' ').join("%20") : '')
 				+ (jobSearchInput.city ? '&city%5B%5D=' + jobSearchInput.city.split(' ').join("%20") : '')
 				+ "&distanceType=Mi&radius=24km&latitude=&longitude=&loc_group_id=&loc_query="
@@ -36,6 +35,9 @@ router.post('/amazon', function(req, res) {
 				links = links.map(element => element.textContent)
 				let arr = []
 				for (let i = 0; i < 5; i++) {
+					if(!links[i]) {
+						break
+					}
 					arr.push(links[i]);
 				}
 				return arr

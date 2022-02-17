@@ -18,18 +18,8 @@ router.post('/shopify', function(req, res) {
 				}
 			});
 
-			if (jobSearchInput.country.toLowerCase() === "united states of america" || jobSearchInput.country.toLowerCase() === 'usa' || jobSearchInput.country.toLowerCase() === "america") {
-                jobSearchInput.country = "United States"
-            }
-			//https://www.shopify.com/careers/search?keywords=Front%20End&sort=
-			//https://www.shopify.com/careers/search?locations%5B%5D=United%20States&keywords=Front%20End&sort=
-			//https://www.shopify.com/careers/search?locations%5B%5D=United%20Stateskeywords=Front%20End&sort=
-
-
 			//Each URL has to be customized to fit each individual website
-			const URL = "https://www.shopify.com/careers/search?"
-			+ (jobSearchInput.country ? "locations%5B%5D=" + jobSearchInput.country.split(' ').join("%20") : '')
-			+ "&keywords="
+			const URL = "https://www.shopify.com/careers/search?locations%5B%5D=United%20States&keywords="
 			+ jobSearchInput.jobTitleSearch.split(' ').join("%20")
 			+ "&sort="
 			await page.goto(URL, {
@@ -40,17 +30,20 @@ router.post('/shopify', function(req, res) {
 				links = links.map(element => element.textContent)
 				let arr = []
 				for (let i = 0; i < 5; i++) {
+					if(!links[i]) {
+						break
+					}
 					arr.push(links[i]);
 				}
 				return arr
 			});
 
 			//Escape function if the scraped results return nothing from targeted site
-			// if(!jobTitles[0]) {
-			// 	let results = [companyName, URL, ["No Results. Note: This company's search works only for certain and exact city locations OR no City input entered at all"]]
-			// 	res.json(results)
-			// 	return
-			// }
+			if(!jobTitles[0]) {
+				let results = [companyName, URL, ["No Results. Note: This company's search works only for certain and exact city locations OR no City input entered at all"]]
+				res.json(results)
+				return
+			}
 
 			let jobLinks = await page.$$eval('tr > td > a', links => {
 				links = links.map(element => element.href)
