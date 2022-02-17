@@ -6,6 +6,7 @@ $font-color: #e6e6e6;
     text-align: center;
     border: 1px solid orange;
     width: 70%;
+
     input {
         margin: 1%;
         padding: 1%;
@@ -15,8 +16,9 @@ $font-color: #e6e6e6;
         text-align: center;
         display: flex;
         flex-direction: column;
-        width: 50%;
+        width: 20%;
         margin: 0 auto;
+        font-size: 2rem;
 
         label {
             font-size: 1rem;
@@ -28,6 +30,10 @@ $font-color: #e6e6e6;
         #jobSearchInput {
             height: 30px;
         }
+    }
+
+    select {
+        padding: 1%;
     }
 }
     

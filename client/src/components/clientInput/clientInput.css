@@ -18,8 +18,9 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 50%;
+  width: 20%;
   margin: 0 auto;
+  font-size: 2rem;
 }
 
 #inputArea #jobSearchInputContainer label {
@@ -31,5 +32,9 @@
 
 #inputArea #jobSearchInputContainer #jobSearchInput {
   height: 30px;
+}
+
+#inputArea select {
+  padding: 1%;
 }
 /*# sourceMappingURL=clientInput.css.map */
