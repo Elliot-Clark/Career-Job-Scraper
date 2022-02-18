@@ -3,7 +3,6 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    border: 2px solid green;
     width: 50%;
     margin: 0 auto;
 
@@ -12,18 +11,63 @@
         padding: 1rem;
     }
 
-    #checkboxes {
-        width: 100%;
-        margin: 0 auto;
-        display: flex;
-        flex-wrap:wrap;
-        font-size: 1.5rem;
-        text-align: left;
-        
-        span {
-            white-space:nowrap;
-            width: 25%;
-            padding-left: 7vw;
+    .dropdown-check-list {
+        display: inline-block;
+
+        #anchor {
+            position: relative;
+            cursor: pointer;
+            display: inline-block;
+            padding: 5px 50px 5px 10px;
+            color: black;
+            border: 1px solid black;
+            background-color: white;
+            font-size: 1.5rem;
+
+            &:after {
+                position: absolute;
+                content: "";
+                border-left: 2px solid white;
+                border-top: 2px solid white;
+                padding: 5px;
+                right: 10px;
+                top: 35%;
+                -moz-transform: rotate(-135deg);
+                -ms-transform: rotate(-135deg);
+                -o-transform: rotate(-135deg);
+                -webkit-transform: rotate(-135deg);
+                transform: rotate(-135deg);
+            }
+
         }
+
+        ul div {
+            text-align: center;
+        }
+        
+        ul.items {
+            padding: 2px;
+            display: none;
+            margin: 0;
+            border: 1px solid #ccc;
+            text-align: left;
+
+
+            li {
+                font-size: 29px;
+                list-style: none;
+                width: 25%;
+                white-space:nowrap;
+                display: inline-block;
+            }
+        }
+    }
+
+    .dropdown-check-list.visible .items {
+        display: block;
+    }
+
+    .border {
+        border-bottom: none !important; 
     }
 }
