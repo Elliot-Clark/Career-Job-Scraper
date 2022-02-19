@@ -30,6 +30,24 @@ $font-color: #e6e6e6;
         }
     }
 
+    #stateCityCompanies {
+        display: flex;
+        justify-content: center;
+        margin: 1%;
+
+        #stateInput {
+            height: 50px;
+            margin: 0;
+            padding: 0;
+        }
+    
+        #cityInput {
+            height: 45px;
+            margin: 0% 2%;
+            padding: 0;
+        }
+    }
+
     select {
         padding: 1%;
     }

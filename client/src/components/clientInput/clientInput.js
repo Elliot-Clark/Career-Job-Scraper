@@ -8,13 +8,19 @@ class ClientInput extends Component {
     constructor() {
         super()
         this.state = {
+            timer: false
         }
       }
 
       initSearch = () => {
-        if (!document.getElementById("jobSearchInput").value) {
+        if (!document.getElementById("jobSearchInput").value || this.state.timer) {
             return
         }
+        //Preventing multiple runs of the search from multiple clicks
+        this.setState({ timer: true}, () => {
+            setTimeout(() => {this.setState({ timer: false})}, 8000);
+        })
+
         this.props.toggleReplaceJobs();
 
         let jobSearchInput = document.getElementById("jobSearchInput").value
@@ -126,8 +132,8 @@ class ClientInput extends Component {
                     <label htmlFor="jobSearchInput">Job Search Input (required)</label>
                     <input type="text" id="jobSearchInput" name="jobSearchInput" placeholder='Enter Job Here' defaultValue={"Front End"}></input>
                 </div>
-                <div> 
-                    <select name="stateInput" id="stateInput" data-label="Select multiple">
+                <div id="stateCityCompanies"> 
+                    <select name="stateInput" id="stateInput">
                         <option value="Alabama">Alabama</option>
                         <option value="Alaska">Alaska</option>
                         <option value="Arizona">Arizona</option>
@@ -180,11 +186,9 @@ class ClientInput extends Component {
                         <option value="Wyoming">Wyoming</option>
                     </select>
                     <input type="text" id="cityInput" name="cityInput" placeholder='City' defaultValue={'Phoenix'}></input>
-                </div>
-                <div>
                     < Checkbox />
-                    <input type="button" id="submit" value="Submit" onClick={this.initSearch}></input>
-                </div> 
+                </div>
+                <input type="button" id="submit" value="Submit" onClick={this.initSearch}></input>
             </div>
         );
     }
