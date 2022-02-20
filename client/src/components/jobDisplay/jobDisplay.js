@@ -13,7 +13,12 @@ const JobDisplay = (props) =>  {
                     <span>{item}</span>
                     <img src={require(`./logos/${item}.png`)} alt={item + " Logo"} ></img>
                 </a>
-                <span className="notes">{props.notes[index]}</span>
+                {props.notes[index] ? 
+                    <span className="notes">
+                        {props.notes[index]}
+                    </span>
+                : ''}
+
                 {!props.jobs[index] ? <div className="NoResults">Nothing</div> : ''}
                 {   
                     props.jobs[index].map((item, index) => {
