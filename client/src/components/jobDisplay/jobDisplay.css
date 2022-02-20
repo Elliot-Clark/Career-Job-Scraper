@@ -1,39 +1,61 @@
-.groupedJobList {
+#jobDisplay {
+  margin: 0 auto;
+}
+
+#jobDisplay .groupedJobList {
   width: 80vw;
   border: 2px solid gray;
   border-radius: 5px;
   padding: 2%;
   background-color: #ccc;
   letter-spacing: -1px;
-  margin: 5%;
+  margin-top: 5%;
+  left: 0;
 }
 
-.groupedJobList a {
+#jobDisplay .groupedJobList a {
   text-decoration: none;
   color: black;
   background-color: darkgrey;
   border-radius: 10px;
 }
 
-.groupedJobList a img {
+#jobDisplay .groupedJobList a img {
   background-color: green;
   height: 100px;
   width: 100px;
   padding: 1rem;
 }
 
-.groupedJobList .companyTitle {
+#jobDisplay .groupedJobList .notes {
+  font-size: 1.2rem;
+  background-color: blue;
+  margin: .5%;
+  padding: .5%;
+  border-radius: 20px;
+  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  white-space: nowrap;
+}
+
+#jobDisplay .groupedJobList .companyTitle {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  font-size: 3rem;
+  font-size: 4rem;
+  letter-spacing: 2px;
   font-weight: bold;
 }
 
-.groupedJobList .companyTitle span {
+#jobDisplay .groupedJobList .companyTitle span {
   text-align: left;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -42,13 +64,14 @@
       -ms-flex-align: center;
           align-items: center;
   margin-left: 5%;
+  text-decoration: underline;
 }
 
-.groupedJobList ul {
+#jobDisplay .groupedJobList ul {
   background-color: grey;
 }
 
-.groupedJobList ul li {
+#jobDisplay .groupedJobList ul li {
   background-color: white;
   border: 1px solid grey;
   text-align: left;
@@ -61,7 +84,7 @@
           justify-content: space-between;
 }
 
-.groupedJobList ul li div {
+#jobDisplay .groupedJobList ul li div {
   width: auto;
   padding: .3em;
   font-size: 22px;

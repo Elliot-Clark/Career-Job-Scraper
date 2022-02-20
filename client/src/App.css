@@ -1,5 +1,11 @@
 .App {
   font-family: 'Raleway';
+  width: calc(100vw - 18px);
+}
+
+html {
+  overflow: -moz-scrollbars-vertical; 
+  overflow-y: scroll;
 }
 
 .App-logo {

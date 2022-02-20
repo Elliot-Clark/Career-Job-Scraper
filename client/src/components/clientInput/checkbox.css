@@ -1,21 +1,27 @@
 #checkboxContainer {
   text-align: center;
-  width: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 #checkboxContainer .multiselect {
   position: relative;
   width: 150px;
   font-size: 1rem;
-  color: black;
 }
 
-#checkboxContainer .multiselect .selectBox select {
+#checkboxContainer .multiselect select {
   width: 100%;
   height: 50px;
+  padding: 0 10px;
 }
 
-#checkboxContainer .multiselect .selectBox .overSelect {
+#checkboxContainer .multiselect .overSelect {
   position: absolute;
   left: 0;
   right: 0;
@@ -23,18 +29,20 @@
   bottom: 0;
 }
 
-#checkboxContainer #checkboxes {
+#checkboxContainer .multiselect button {
+  margin: 6%;
+}
+
+#checkboxContainer .multiselect #checkboxes {
   display: none;
   border: 1px #dadada solid;
   position: absolute;
   background-color: white;
 }
 
-#checkboxContainer #checkboxes label {
+#checkboxContainer .multiselect #checkboxes label {
   text-align: left;
-}
-
-#checkboxContainer #checkboxes label {
   display: block;
+  color: black;
 }
 /*# sourceMappingURL=checkbox.css.map */

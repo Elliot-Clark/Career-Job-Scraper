@@ -1,58 +1,80 @@
-.groupedJobList {
-    width: 80vw;
-    border: 2px solid gray;
-    border-radius: 5px;
-    padding: 2%;
-    background-color: #ccc; 
-    letter-spacing: -1px;
-    margin: 5%;
+#jobDisplay {
+    margin: 0 auto;
 
-    a {
-        text-decoration: none;
-        color: black;
-        background-color: darkgrey;
-        border-radius: 10px;
-
-        img {
-            background-color: green;
-            height: 100px;
-            width: 100px;
-            padding: 1rem;
-        }
-    }
+    .groupedJobList {
+        width: 80vw;
+        border: 2px solid gray;
+        border-radius: 5px;
+        padding: 2%;
+        background-color: #ccc; 
+        letter-spacing: -1px;
+        margin-top: 5%;
+        left: 0;
     
-    .companyTitle {
-        display: flex;
-        justify-content: space-between;
-        font-size: 3rem;
-        font-weight: bold;
-
-        span {
-            text-align: left;
-            display: flex;
-            align-items: center;
-            margin-left: 5%;
+        a {
+            text-decoration: none;
+            color: black;
+            background-color: darkgrey;
+            border-radius: 10px;
+    
+            img {
+                background-color: green;
+                height: 100px;
+                width: 100px;
+                padding: 1rem;
+            }
         }
-    }
-
-    ul {
-        background-color: grey;
-
-        li {
-            background-color:white;
-            border: 1px solid grey;
-            text-align: left;
-            margin: 1%;
+    
+        .notes {
+            font-size: 1.2rem;
+            background-color: blue;
+            margin: .5%;
+            padding: .5%;
+            border-radius: 20px;
+            text-align: center;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: fit-content;
+            white-space: nowrap;
+        }
+        
+        .companyTitle {
             display: flex;
             justify-content: space-between;
-
-            div {
-                width: auto;
-                padding: .3em;
-                font-size: 22px;
-                line-height: 1.7;
-                font-family: "SF Pro Text","SF Pro Icons","Helvetica Neue",Helvetica,Arial,sans-serif;
+            font-size: 4rem;
+            letter-spacing: 2px;
+            font-weight: bold;
+    
+            span {
+                text-align: left;
+                display: flex;
+                align-items: center;
+                margin-left: 5%;
+                text-decoration: underline;
+            }
+        }
+    
+        ul {
+            background-color: grey;
+    
+            li {
+                background-color:white;
+                border: 1px solid grey;
+                text-align: left;
+                margin: 1%;
+                display: flex;
+                justify-content: space-between;
+    
+                div {
+                    width: auto;
+                    padding: .3em;
+                    font-size: 22px;
+                    line-height: 1.7;
+                    font-family: "SF Pro Text","SF Pro Icons","Helvetica Neue",Helvetica,Arial,sans-serif;
+                }
             }
         }
     }
 }
+

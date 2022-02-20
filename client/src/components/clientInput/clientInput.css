@@ -1,7 +1,7 @@
 #inputArea {
   text-align: center;
   border: 1px solid orange;
-  width: 70%;
+  width: 100%;
 }
 
 #inputArea input {
@@ -9,8 +9,14 @@
   padding: 1%;
 }
 
+#inputArea label {
+  font-size: 1rem;
+  text-align: left;
+  color: #e6e6e6;
+  padding-left: 5px;
+}
+
 #inputArea #jobSearchInputContainer {
-  text-align: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -18,16 +24,10 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 20%;
+  width: 10%;
+  min-width: 200px;
   margin: 0 auto;
   font-size: 2rem;
-}
-
-#inputArea #jobSearchInputContainer label {
-  font-size: 1rem;
-  text-align: left;
-  color: #e6e6e6;
-  padding-left: 10px;
 }
 
 #inputArea #jobSearchInputContainer #jobSearchInput {
@@ -44,16 +44,37 @@
   margin: 1%;
 }
 
+#inputArea #stateCityCompanies #stateInputContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
 #inputArea #stateCityCompanies #stateInput {
   height: 50px;
   margin: 0;
-  padding: 0;
+  padding: 0 10px;
 }
 
-#inputArea #stateCityCompanies #cityInput {
+#inputArea #stateCityCompanies #cityInputContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0 2%;
+}
+
+#inputArea #stateCityCompanies #cityInputContainer #cityInput {
   height: 45px;
   margin: 0% 2%;
-  padding: 0;
+  padding: 0 10px;
 }
 
 #inputArea select {
