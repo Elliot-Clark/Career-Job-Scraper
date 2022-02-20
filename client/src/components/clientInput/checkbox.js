@@ -31,11 +31,11 @@ let Checkbox = () => {
 
     return (
         <div id="checkboxContainer">
-            
+            <label htmlFor="multiselect">Companies</label>
             <div className="multiselect">
                 <div className="selectBox" onClick={showCheckboxes}>
                     <select>
-                        <option>Companies</option>
+                        <option></option>
                     </select>
                     <div className="overSelect"></div>
                 </div>
@@ -43,22 +43,20 @@ let Checkbox = () => {
                     <button type="button" name="checkall" onClick={selectAll}>Select All</button>
                     <button type="button" name="checkall" onClick={unSelectAll}>Unselect All</button>
                     
-                    <label htmlFor="Adobe"><input className="comapnyCheckbox" type="checkbox" id="adobe"/>Adobe</label>
-                    <label htmlFor="Amazon"><input className="comapnyCheckbox" type="checkbox" id="amazon"/>Amazon</label>
-                    <label htmlFor="Apple"><input className="comapnyCheckbox" type="checkbox" id="apple"/>Apple</label>
-                    <label htmlFor="Crateandbarrel"><input className="comapnyCheckbox" type="checkbox" id="crateandbarrel"/>Crate and Barrel</label>
-                    <label htmlFor="ebay"><input className="comapnyCheckbox" type="checkbox" id="ebay"/>eBay</label>
-                    <label htmlFor="Facebook"><input className="comapnyCheckbox" type="checkbox" id="facebook"/>Facebook</label>
-                    <label htmlFor="Intuit"><input className="comapnyCheckbox" type="checkbox" id="intuit"/>Intuit</label>
-                    <label htmlFor="Microsoft"><input className="comapnyCheckbox" type="checkbox" id="microsoft"/>Microsoft</label>
-                    <label htmlFor="Paypal"><input className="comapnyCheckbox" type="checkbox" id="paypal"/>Paypal</label>
-                    <label htmlFor="SAP"><input className="comapnyCheckbox" type="checkbox" id="sap"/>SAP</label>
-                    <label htmlFor="Shopify"><input className="comapnyCheckbox" type="checkbox" id="shopify"/>Shopify</label>
-                    <label htmlFor="Uber"><input className="comapnyCheckbox" type="checkbox" id="uber"/>Uber</label>
+                    <label htmlFor="Adobe"><input className="comapnyCheckbox" type="checkbox" id="adobe" defaultChecked/>Adobe</label>
+                    <label htmlFor="Amazon"><input className="comapnyCheckbox" type="checkbox" id="amazon" defaultChecked/>Amazon</label>
+                    <label htmlFor="Apple"><input className="comapnyCheckbox" type="checkbox" id="apple" defaultChecked/>Apple</label>
+                    <label htmlFor="Crateandbarrel"><input className="comapnyCheckbox" type="checkbox" id="crateandbarrel" defaultChecked/>Crate and Barrel</label>
+                    <label htmlFor="ebay"><input className="comapnyCheckbox" type="checkbox" id="ebay" defaultChecked/>eBay</label>
+                    <label htmlFor="Facebook"><input className="comapnyCheckbox" type="checkbox" id="facebook" defaultChecked/>Facebook</label>
+                    <label htmlFor="Intuit"><input className="comapnyCheckbox" type="checkbox" id="intuit" defaultChecked/>Intuit</label>
+                    <label htmlFor="Microsoft"><input className="comapnyCheckbox" type="checkbox" id="microsoft" defaultChecked/>Microsoft</label>
+                    <label htmlFor="Paypal"><input className="comapnyCheckbox" type="checkbox" id="paypal" defaultChecked/>Paypal</label>
+                    <label htmlFor="SAP"><input className="comapnyCheckbox" type="checkbox" id="sap" defaultChecked/>SAP</label>
+                    <label htmlFor="Shopify"><input className="comapnyCheckbox" type="checkbox" id="shopify" defaultChecked/>Shopify</label>
+                    <label htmlFor="Uber"><input className="comapnyCheckbox" type="checkbox" id="uber" defaultChecked/>Uber</label>
                 </div>
             </div>
-
-
         </div>
     )
 }
