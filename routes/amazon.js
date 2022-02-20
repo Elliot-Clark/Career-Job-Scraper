@@ -17,15 +17,14 @@ router.post('/amazon', function(req, res) {
 				req.continue();
 				}
 			});
+
 			
 			//Each URL has to be customized to fit each individual website
-			const URL = "https://www.amazon.jobs/en/search?offset=0&result_limit=10&sort=relevant&" 
-				+ 'country%5B%5D=' + "USA"
-				+ (jobSearchInput.USstate ? '&state%5B%5D=' + jobSearchInput.USstate.split(' ').join("%20") : '')
-				+ (jobSearchInput.city ? '&city%5B%5D=' + jobSearchInput.city.split(' ').join("%20") : '')
-				+ "&distanceType=Mi&radius=24km&latitude=&longitude=&loc_group_id=&loc_query="
-				+ "&base_query=" + jobSearchInput.jobTitleSearch.split(' ').join("%20")
-				+ "&city=&country=&region=&county=&query_options=&"
+			const URL = "https://www.amazon.jobs/en/search?base_query=" 
+				+ jobSearchInput.jobTitleSearch.split(' ').join("+")
+				+ "&loc_query=&latitude=&longitude=&loc_group_id=&invalid_location=false&country=&city=&region=&county=USA&city=&region="
+				+ jobSearchInput.USstate.split(' ').join("+")
+				+ "&county="
 			await page.goto(URL, {
 				waitUntil: "networkidle2",
 			});
