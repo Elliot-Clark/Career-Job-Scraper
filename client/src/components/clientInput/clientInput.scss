@@ -1,9 +1,14 @@
-$font-color: #e6e6e6;
+$font-color: #272727;
 
 #inputArea {
     text-align: center;
-    border: 1px solid orange;
     width: 100%;
+
+    h2 {
+        font-size: 3.5rem;
+        line-height: 1.5;
+        margin: 40px 0 0;
+    }
 
     input {
         margin: 1%;
@@ -15,6 +20,7 @@ $font-color: #e6e6e6;
         text-align: left;
         color: $font-color;
         padding-left: 5px;
+
     }
     
     #jobSearchInputContainer {
@@ -28,6 +34,13 @@ $font-color: #e6e6e6;
 
         #jobSearchInput {
             height: 30px;
+            padding: 5%;
+            padding-left: 15px;
+
+            &:focus {
+                outline: #c1e0fe solid 3px;
+                outline-offset: -3px;
+            }
         }
     }
 
@@ -64,6 +77,14 @@ $font-color: #e6e6e6;
 
     select {
         padding: 1%;
+    }
+
+    #search {
+        background-color: purple;
+        border-radius: 5px;
+        color: white;
+        font-weight: bold;
+        letter-spacing: 1px;
     }
 }
     

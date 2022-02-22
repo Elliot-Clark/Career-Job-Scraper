@@ -35,7 +35,7 @@ let Checkbox = () => {
             <div className="multiselect">
                 <div className="selectBox" onClick={showCheckboxes}>
                     <select>
-                        <option></option>
+                        <option>Click to View</option>
                     </select>
                     <div className="overSelect"></div>
                 </div>

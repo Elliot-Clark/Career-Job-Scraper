@@ -194,7 +194,7 @@ class ClientInput extends Component {
                     </div>
                     < Checkbox />
                 </div>
-                <input type="button" id="submit" value="Submit" onClick={this.initSearch}></input>
+                <input type="button" id="search" value="Search" onClick={this.initSearch}></input>
             </div>
         );
     }

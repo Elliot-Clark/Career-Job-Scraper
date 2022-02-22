@@ -45,20 +45,16 @@ class App extends Component {
   render () {
     return (
       <div className="App">
-        <header className="App-header">
-  
-          <img src={logo} className="App-logo" alt="logo" />
-          <ClientInput 
-            handleCallBack = {this.handleCallBack} 
-            toggleReplaceJobs = {this.toggleReplaceJobs}
-          />
-          <JobDisplay 
-            companies = {this.state.companies}
-            searchlURLs = {this.state.searchlURLs}
-            jobs = {this.state.jobs}
-            notes = {this.state.notes}
-          />
-        </header>
+        <ClientInput 
+          handleCallBack = {this.handleCallBack} 
+          toggleReplaceJobs = {this.toggleReplaceJobs}
+        />
+        <JobDisplay 
+          companies = {this.state.companies}
+          searchlURLs = {this.state.searchlURLs}
+          jobs = {this.state.jobs}
+          notes = {this.state.notes}
+        />
       </div>
     );
   }
