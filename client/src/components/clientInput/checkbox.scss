@@ -1,12 +1,17 @@
 #checkboxContainer {
     text-align: center;
     display: flex;
-    flex-direction: column;
+    flex-direction: column; 
 
     .multiselect {
         position: relative;
         width: 150px;
         font-size: 1rem;
+
+        &:active {
+            outline: #c1e0fe solid 3px;
+            outline-offset: -3px;
+        }
         
         select {
             width: 100%;

@@ -21,7 +21,6 @@ router.post('/microsoft', function(req, res) {
 			//Each URL has to be customized to fit each individual website
 			const URL = "https://careers.microsoft.com/us/en/search-results?keywords="
             + jobSearchInput.jobTitleSearch.split(' ').join("%20")
-            + " United%20States"
             + (jobSearchInput.USstate ? "%20" + jobSearchInput.USstate.split(' ').join("%20") : '')
             + (jobSearchInput.city ? "%20" + jobSearchInput.city.split(' ').join("%20") : '')
 			await page.goto(URL, {

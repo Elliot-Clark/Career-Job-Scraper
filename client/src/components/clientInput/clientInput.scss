@@ -58,6 +58,11 @@ $font-color: #272727;
             height: 50px;
             margin: 0;
             padding: 0 10px;
+
+            &:focus {
+                outline: #c1e0fe solid 3px;
+                outline-offset: -3px;
+            }
         }
 
         #cityInputContainer {
@@ -69,6 +74,11 @@ $font-color: #272727;
                 height: 45px;
                 margin: 0% 2%;
                 padding: 0 10px;
+
+                &:focus {
+                    outline: #c1e0fe solid 3px;
+                    outline-offset: -3px;
+                }
             }
         }
     

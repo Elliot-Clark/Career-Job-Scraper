@@ -72,6 +72,11 @@
   padding: 0 10px;
 }
 
+#inputArea #stateCityCompanies #stateInput:focus {
+  outline: #c1e0fe solid 3px;
+  outline-offset: -3px;
+}
+
 #inputArea #stateCityCompanies #cityInputContainer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -87,6 +92,11 @@
   height: 45px;
   margin: 0% 2%;
   padding: 0 10px;
+}
+
+#inputArea #stateCityCompanies #cityInputContainer #cityInput:focus {
+  outline: #c1e0fe solid 3px;
+  outline-offset: -3px;
 }
 
 #inputArea select {
