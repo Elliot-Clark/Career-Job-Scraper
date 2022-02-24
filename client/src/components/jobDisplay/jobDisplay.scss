@@ -1,32 +1,39 @@
 #jobDisplay {
-    margin: 0 auto;
+    display: flex;
+    justify-content: center;
 
     .groupedJobList {
-        width: 80vw;
-        border: 2px solid gray;
+        width: 60vw;
+        border: 2px solid rgb(192, 192, 192);
         border-radius: 5px;
         padding: 2%;
-        background-color: #ccc; 
+        padding-bottom: 0;
         letter-spacing: -1px;
-        margin-top: 5%;
+        margin-top: 2.5%;
+        margin-bottom: 2.5%;
         left: 0;
-    
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset, rgb(38, 57, 77) 0px 20px 30px -10px;
+
         a {
             text-decoration: none;
             color: black;
-            background-color: darkgrey;
+            border: 2px solid rgb(128, 128, 128);
             border-radius: 10px;
-    
+
             img {
-                background-color: green;
                 height: 100px;
                 width: 100px;
                 padding: 1rem;
+
+                &:hover {
+                    transform: scale(1.15);
+                }
             }
         }
     
         .notes {
             font-size: 1.2rem;
+            color: white;
             background-color: blue;
             margin: .5%;
             padding: .5%;
@@ -43,29 +50,33 @@
             display: flex;
             justify-content: space-between;
             font-size: 4rem;
-            letter-spacing: 2px;
+            letter-spacing: -4px;
             font-weight: bold;
+            padding: 0px 10%;
     
             span {
                 text-align: left;
                 display: flex;
                 align-items: center;
                 margin-left: 5%;
-                text-decoration: underline;
             }
         }
     
         ul {
-            background-color: grey;
+            background-color: lightgray;
+
+            &:hover {
+                outline: #c1e0fe solid 4px;
+            }
+
     
             li {
                 background-color:white;
-                border: 1px solid grey;
                 text-align: left;
-                margin: 1%;
+                margin: .3%;
                 display: flex;
                 justify-content: space-between;
-    
+
                 div {
                     width: auto;
                     padding: .3em;
