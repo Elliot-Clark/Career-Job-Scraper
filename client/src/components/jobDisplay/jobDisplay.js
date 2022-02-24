@@ -10,8 +10,9 @@ const JobDisplay = (props) =>  {
         return (
             <div className="groupedJobList" key={index}>
                 <a target="_blank" rel="noreferrer" className="companyTitle" href={props.searchlURLs[index]}>
+                    <img src={require(`./logos/${item}.png`)} alt={item + " Logo"}></img>
                     <span>{item}</span>
-                    <img src={require(`./logos/${item}.png`)} alt={item + " Logo"} ></img>
+                    <img src={require(`./logos/linkout.png`)} alt={"Click to go directly to this company's Career page search results based on your input"}></img>
                 </a>
                 {props.notes[index] ? 
                     <span className="notes">
