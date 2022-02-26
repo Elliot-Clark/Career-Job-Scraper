@@ -4,10 +4,15 @@ $font-color: #272727;
     text-align: center;
     width: 100%;
 
-    h2 {
-        font-size: 3.5rem;
-        line-height: 1.5;
+    h1 {
+        font-size: 4rem;
         margin: 40px 0 0;
+        text-decoration: underline;
+    }
+
+    h2 {
+        margin-top: 0;
+        margin-bottom: 40px;
     }
 
     input {
@@ -26,22 +31,45 @@ $font-color: #272727;
     #jobSearchInputContainer {
         display: flex;
         flex-direction: column;
-        width: 10%;
+        width: 15%;
         min-width: 200px;
         margin: 0 auto;
         font-size: 2rem;
+    
+        #jobSearchBar {
+            display: flex;
+            align-items: center;
+            border: 1px solid black;
+            border-radius: 5px;
 
+            #jobSearchInput {
+                font-size: 1.4rem;
+                height: 30px;
+                width: 90%;
+                padding: 5%;
+                padding-left: 15px;
+                border: none;
 
-        #jobSearchInput {
-            height: 30px;
-            padding: 5%;
-            padding-left: 15px;
-
-            &:focus {
-                outline: #c1e0fe solid 3px;
-                outline-offset: -3px;
+                &:focus {
+                    outline: #c1e0fe solid 3px;
+                    outline-offset: -3px;
+                }  
             }
-        }
+
+            #jobSearchButton {
+                margin: 3%;
+                width: 20px;
+                height: 15px;
+                font-size: 9px;
+                text-align: center;
+                color: white;
+                background-color: grey;
+                border: none;
+                border-radius: 100%;
+                cursor: pointer;
+                user-select: none;
+            }
+        }  
     }
 
     #stateCityCompanies {

@@ -1,6 +1,6 @@
 #jobDisplay {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
 
     .groupedJobList {
         width: 60vw;
@@ -9,8 +9,7 @@
         padding: 2%;
         padding-bottom: 0;
         letter-spacing: -1px;
-        margin-top: 2.5%;
-        margin-bottom: 2.5%;
+        margin: 2.5% auto;
         left: 0;
         box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset, rgb(38, 57, 77) 0px 20px 30px -10px;
 
