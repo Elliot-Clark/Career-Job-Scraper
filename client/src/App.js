@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import ClientInput from './components/clientInput/clientInput';
 import JobDisplay from './components/jobDisplay/jobDisplay';
+import Footer from './components/Footer/footer';
 
 
 class App extends Component {
@@ -54,6 +55,7 @@ class App extends Component {
           jobs = {this.state.jobs}
           notes = {this.state.notes}
         />
+        <Footer />
       </div>
     );
   }
