@@ -12,6 +12,12 @@ class ClientInput extends Component {
         }
       }
 
+      clearSearch = () => {
+        const input = document.getElementById("jobSearchInput")
+        input.value = ""
+        input.focus();
+      }
+
       initSearch = () => {
         if (!document.getElementById("jobSearchInput").value || this.state.timer) {
             return
@@ -127,15 +133,20 @@ class ClientInput extends Component {
     render() {
         return (
             <div id="inputArea">
-                <h2>Careers Job Search:</h2>
+                <h1>Careers Job Search</h1>
+                <h2>Search Multiple Career Job Listings at Once</h2>
                 <div id="jobSearchInputContainer">
                     <label htmlFor="jobSearchInput">Job Search Input (required)</label>
-                    <input type="text" id="jobSearchInput" name="jobSearchInput" placeholder='Enter Job Here' defaultValue={"Front End"}></input>
+                    <div id="jobSearchBar">
+                        <input type="text" id="jobSearchInput" name="jobSearchInput" placeholder='Search Jobs' defaultValue={"Front End"}></input>
+                        <button id="jobSearchButton" onClick={this.clearSearch}>X</button>
+                    </div>
                 </div>
                 <div id="stateCityCompanies">
                     <div id="stateInputContainer">
                         <label htmlFor="stateInput">State (optional)</label>
-                        <select name="stateInput" id="stateInput" defaultValue={'Arizona'}>
+                        <select name="stateInput" id="stateInput">
+                            <option value=""></option>
                             <option value="Alabama">Alabama</option>
                             <option value="Alaska">Alaska</option>
                             <option value="Arizona">Arizona</option>
