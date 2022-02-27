@@ -128,6 +128,16 @@ class ClientInput extends Component {
                 this.props.handleCallBack(response.data);
             });
         } 
+
+        if (document.getElementById("intel").checked) {
+            axios.post('/intel', {}, {
+                params: { jobTitleSearch: jobSearchInput, city: city, USstate: USstate,}
+            }).then(response => {
+                this.props.handleCallBack(response.data);
+            });
+        } 
+
+
     }
 
     render() {

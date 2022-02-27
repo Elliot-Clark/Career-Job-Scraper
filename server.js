@@ -37,6 +37,8 @@ app.use(intuit)
 const shopify = require('./routes/shopify.js');
 app.use(shopify)
 
+const intel = require('./routes/intel.js');
+app.use(intel)
 
 
 
