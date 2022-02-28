@@ -4,26 +4,29 @@ A single page application designed to automate the searching of many different c
 
 ## Current Companies Included in Search:
 
--Adobe
--Amazon
--Apple
--Crate and Barrel
--Ebay
--Facebook
--Intel
--Intuit
--Microsoft
--Paypal
--SAP
--Shopify
--Uber
+- Adobe
+- Amazon
+- Apple
+- Crate and Barrel
+- Ebay
+- Facebook
+- Intel
+- Intuit
+- Microsoft
+- Paypal
+- SAP
+- Shopify
+- Uber
 
 ## Installation and usage:
 
-> Cd into client folder
-> npm install
-> Cd.. into project folder
-> npm install
-
+```
+Cd into client folder
+npm install
+Cd.. into project folder
+npm install
+```
+```
 To use type:
-> npm run dev
+npm run dev
+```
