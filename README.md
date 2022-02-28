@@ -1,3 +1,29 @@
-# Job Scraper
+# Career Job Scraper
 
-Currently a WIP project with the end goal of scraping relevant job listings from various company company websites and display results in frontend React.
+A single page application designed to automate the searching of many different company's career pages at once and return search results based on the user's input. 
+
+## Current Companies Included in Search:
+
+-Adobe
+-Amazon
+-Apple
+-Crate and Barrel
+-Ebay
+-Facebook
+-Intel
+-Intuit
+-Microsoft
+-Paypal
+-SAP
+-Shopify
+-Uber
+
+## Installation and usage:
+
+> Cd into client folder
+> npm install
+> Cd.. into project folder
+> npm install
+
+To use type:
+> npm run dev
