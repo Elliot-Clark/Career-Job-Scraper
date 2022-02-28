@@ -26,7 +26,8 @@ npm install
 Cd.. into project folder
 npm install
 ```
-```
+
 To use type:
+```
 npm run dev
 ```
