@@ -40,6 +40,9 @@ app.use(shopify)
 const intel = require('./routes/intel.js');
 app.use(intel)
 
+const cisco = require('./routes/cisco.js');
+app.use(cisco)
+
 
 
 

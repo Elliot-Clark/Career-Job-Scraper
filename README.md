@@ -7,6 +7,7 @@ A single page application designed to automate the searching of many different c
 - Adobe
 - Amazon
 - Apple
+- Cisco
 - Crate and Barrel
 - Ebay
 - Facebook

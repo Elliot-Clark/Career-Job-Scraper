@@ -137,6 +137,14 @@ class ClientInput extends Component {
             });
         } 
 
+        if (document.getElementById("cisco").checked) {
+            axios.post('/cisco', {}, {
+                params: { jobTitleSearch: jobSearchInput, city: city, USstate: USstate,}
+            }).then(response => {
+                this.props.handleCallBack(response.data);
+            });
+        } 
+
 
     }
 

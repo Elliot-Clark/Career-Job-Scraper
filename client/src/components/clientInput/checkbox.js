@@ -46,6 +46,7 @@ let Checkbox = () => {
                     <label htmlFor="Adobe"><input className="comapnyCheckbox" type="checkbox" id="adobe" defaultChecked/>Adobe</label>
                     <label htmlFor="Amazon"><input className="comapnyCheckbox" type="checkbox" id="amazon" defaultChecked/>Amazon</label>
                     <label htmlFor="Apple"><input className="comapnyCheckbox" type="checkbox" id="apple" defaultChecked/>Apple</label>
+                    <label htmlFor="Cisco"><input className="comapnyCheckbox" type="checkbox" id="cisco" defaultChecked/>Cisco</label>
                     <label htmlFor="Crateandbarrel"><input className="comapnyCheckbox" type="checkbox" id="crateandbarrel" defaultChecked/>Crate and Barrel</label>
                     <label htmlFor="ebay"><input className="comapnyCheckbox" type="checkbox" id="ebay" defaultChecked/>eBay</label>
                     <label htmlFor="Facebook"><input className="comapnyCheckbox" type="checkbox" id="facebook" defaultChecked/>Facebook</label>
