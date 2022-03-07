@@ -40,6 +40,12 @@
   font-size: 2rem;
 }
 
+@media screen and (max-width: 500px) {
+  #inputArea #jobSearchInputContainer {
+    width: 80%;
+  }
+}
+
 #inputArea #jobSearchInputContainer #jobSearchBar {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -90,6 +96,15 @@
       -ms-flex-pack: center;
           justify-content: center;
   margin: 1%;
+}
+
+@media screen and (max-width: 500px) {
+  #inputArea #stateCityCompanies {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 #inputArea #stateCityCompanies #stateInputContainer {
@@ -144,6 +159,9 @@
   border-radius: 5px;
   color: white;
   font-weight: bold;
+  font-size: 1.5rem;
   letter-spacing: 1px;
+  min-width: 90px;
+  min-height: 60px;
 }
 /*# sourceMappingURL=clientInput.css.map */

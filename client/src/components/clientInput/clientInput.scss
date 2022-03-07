@@ -35,12 +35,17 @@ $font-color: #272727;
         min-width: 200px;
         margin: 0 auto;
         font-size: 2rem;
+
+        @media screen and (max-width: 500px) {
+            width: 80%;
+        }
     
         #jobSearchBar {
             display: flex;
             align-items: center;
             border: 1px solid black;
             border-radius: 5px;
+
 
             #jobSearchInput {
                 font-size: 1.4rem;
@@ -54,6 +59,7 @@ $font-color: #272727;
                     outline: #c1e0fe solid 3px;
                     outline-offset: -3px;
                 }  
+
             }
 
             #jobSearchButton {
@@ -76,6 +82,10 @@ $font-color: #272727;
         display: flex;
         justify-content: center;
         margin: 1%;
+
+        @media screen and (max-width: 500px) {
+            flex-direction: column;
+        }
 
         #stateInputContainer {
             display: flex;
@@ -122,7 +132,11 @@ $font-color: #272727;
         border-radius: 5px;
         color: white;
         font-weight: bold;
+        font-size: 1.5rem;
         letter-spacing: 1px;
+        min-width: 90px;
+        min-height: 60px;
     }
 }
     
+
