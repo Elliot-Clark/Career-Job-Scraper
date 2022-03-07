@@ -13,6 +13,12 @@
           user-select: none;
 }
 
+@media screen and (max-width: 500px) {
+  #checkboxContainer {
+    margin: 0 auto;
+  }
+}
+
 #checkboxContainer .multiselect {
   position: relative;
   width: 150px;

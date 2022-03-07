@@ -8,6 +8,12 @@ $font-color: #272727;
         font-size: 4rem;
         margin: 40px 0 0;
         text-decoration: underline;
+
+        
+        @media screen and (max-width: 500px) {
+            margin: 2%;
+            padding: 2%;
+        }
     }
 
     h2 {
@@ -26,6 +32,9 @@ $font-color: #272727;
         color: $font-color;
         padding-left: 5px;
 
+        @media screen and (max-width: 500px) {
+            text-align: center;
+        }
     }
     
     #jobSearchInputContainer {
@@ -85,11 +94,17 @@ $font-color: #272727;
 
         @media screen and (max-width: 500px) {
             flex-direction: column;
+            margin: 10%;
         }
 
         #stateInputContainer {
             display: flex;
             flex-direction: column;
+
+            @media screen and (max-width: 500px) {
+                width: 50%;
+                margin: 0 auto;
+            }
         }
 
         #stateInput {
@@ -108,10 +123,19 @@ $font-color: #272727;
             flex-direction: column;
             margin: 0 2%;
 
+            @media screen and (max-width: 500px) {
+                margin: 5% auto;
+            }
+
             #cityInput {
                 height: 45px;
                 margin: 0% 2%;
                 padding: 0 10px;
+
+                @media screen and (max-width: 500px) {
+                    width: 60%;
+                    margin: 0 auto;
+                }
 
                 &:focus {
                     outline: #c1e0fe solid 3px;

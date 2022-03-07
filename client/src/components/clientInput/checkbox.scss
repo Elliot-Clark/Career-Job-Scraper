@@ -4,6 +4,10 @@
     flex-direction: column; 
     user-select: none;
 
+    @media screen and (max-width: 500px) {
+        margin: 0 auto;
+    }
+
     .multiselect {
         position: relative;
         width: 150px;

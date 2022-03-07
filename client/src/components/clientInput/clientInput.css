@@ -9,6 +9,13 @@
   text-decoration: underline;
 }
 
+@media screen and (max-width: 500px) {
+  #inputArea h1 {
+    margin: 2%;
+    padding: 2%;
+  }
+}
+
 #inputArea h2 {
   margin-top: 0;
   margin-bottom: 40px;
@@ -24,6 +31,12 @@
   text-align: left;
   color: #272727;
   padding-left: 5px;
+}
+
+@media screen and (max-width: 500px) {
+  #inputArea label {
+    text-align: center;
+  }
 }
 
 #inputArea #jobSearchInputContainer {
@@ -104,6 +117,7 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    margin: 10%;
   }
 }
 
@@ -115,6 +129,13 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+@media screen and (max-width: 500px) {
+  #inputArea #stateCityCompanies #stateInputContainer {
+    width: 50%;
+    margin: 0 auto;
+  }
 }
 
 #inputArea #stateCityCompanies #stateInput {
@@ -139,10 +160,23 @@
   margin: 0 2%;
 }
 
+@media screen and (max-width: 500px) {
+  #inputArea #stateCityCompanies #cityInputContainer {
+    margin: 5% auto;
+  }
+}
+
 #inputArea #stateCityCompanies #cityInputContainer #cityInput {
   height: 45px;
   margin: 0% 2%;
   padding: 0 10px;
+}
+
+@media screen and (max-width: 500px) {
+  #inputArea #stateCityCompanies #cityInputContainer #cityInput {
+    width: 60%;
+    margin: 0 auto;
+  }
 }
 
 #inputArea #stateCityCompanies #cityInputContainer #cityInput:focus {
