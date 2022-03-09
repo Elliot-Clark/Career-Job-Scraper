@@ -67,8 +67,8 @@ router.post('/**newcompany**', function(req, res) {
             //  The main search param the user typed in will be: jobSearchInput.jobSearchInput
             //  The city the user input. If there is any: jobSearchInput.city
             //  The state the user select. If there is any: jobSearchInput.USstate
-            // Remember there are no spaces in URLs, so split the text and join it with either "+" or "%20", depending on what they use.
-            // Some career pages don't have a custom place for cities or states like the example above. In that case, simply append the city (if none, then append state) to the end of the search. I.e. Web Developer Los Angeles. That will work fine to narrow done most searches.
+            //Remember there are no spaces in URLs, so split the text and join it with either "+" or "%20", depending on what they use.
+            //Some career pages don't have a custom place for cities or states like the example above. In that case, simply append the city (if none, then append state) to the end of the search. I.e. Web Developer Los Angeles. That will work fine to narrow done most searches.
             //Definitely recommend seeing how this was done in other files in the route folder.
 
 			const URL = 
@@ -121,7 +121,7 @@ router.post('/**newcompany**', function(req, res) {
 			});
 
             //Most career pages don't have their posting dates listed on their search results. If that's the case, simply remove the below block of code below, as well as "jobPostDate[i]" in the results.push statement below.
-			let jobPostDate = await page.$$eval('.posting-date', links => {
+			let jobPostDate = await page.$$eval('**CLASS NAME FOR HTML ELEMENTS CONTAINING JOB POSTING DATES AS THEIR INNER TEXT**', links => {
 				links = links.map(element => element.textContent)
 				console.log(links);
 				let arr = []
